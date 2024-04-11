@@ -1,2 +1,7 @@
-# DiffMatch
-About The pytorch implementation for "DiffMatch: Visual-Language Guidance Makes Better Semi-supervised Change Detector"
+#  DiffMatch: Visual-Language Guidance Makes Better Semi-supervised Change Detector
+
+Datasets and code for DiffMatch paper: [DiffMatch: Visual-Language Guidance Makes Better Semi-supervised Change Detector.]()
+
+## Note
+
+- 2024.04.11: This repo is currently under active development and construction. 

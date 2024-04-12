@@ -1,6 +1,6 @@
 #  DiffMatch: Visual-Language Guidance Makes Better Semi-supervised Change Detector
 
-Datasets and code for DiffMatch paper: [DiffMatch: Visual-Language Guidance Makes Better Semi-supervised Change Detector.]()
+Code for DiffMatch paper: [DiffMatch: Visual-Language Guidance Makes Better Semi-supervised Change Detector.]()
 
 ## Note
 

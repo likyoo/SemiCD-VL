@@ -1,0 +1,16 @@
+__pycache__
+pretrained/
+exp/
+configs/generated/
+jobs/
+visualization/plots/
+*log.txt
+fs_vis*
+data
+gen_cd_label
+.history
+APE_output
+gen_cd_label_vis*
+*.png
+*.zip
+

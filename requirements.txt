@@ -1,0 +1,32 @@
+pandas
+seaborn
+matplotlib
+notebook
+pyyaml>=5.4.0
+easydict==1.10
+pillow==9.5.0
+numpy==1.21.6
+TensorBoardX==2.6
+tensorboard==2.11.2
+setuptools==59.5.0
+opencv-python==4.6.0.66
+scipy==1.7.3
+scikit-learn==1.0.2
+scikit-image==0.19.3
+einops==0.6.1
+h5py==3.8.0
+# The experiments in the paper were conducted with torch==1.12.1+cu113, torchvision==0.13.1+cu113,
+# and a locally built mmcv-full=1.4.4 with cuda 11.8.r11.8 and gcc 11.3.0.
+# In favor of an easier installation, we downgraded torch to a version with a pre-built mmcv-full.
+torch==1.10.1+cu113
+torchvision==0.11.2+cu113
+mmcv-full==1.4.4
+mmsegmentation==0.24.0
+timm==0.6.5
+# ftfy==6.1.1
+# regex==2023.8.8
+openmim==0.3.9
+pycocotools==2.0.7
+# clip @ git+https://github.com/openai/CLIP.git@a1d071733d7111c9c014f024669f959182114e33
+-f https://download.pytorch.org/whl/torch_stable.html 
+-f https://download.openmmlab.com/mmcv/dist/cu113/torch1.10.0/index.html

@@ -105,7 +105,7 @@ The training log, tensorboard, checkpoints, and debug images are stored in `exp/
 
 ## Framework Structure
 
-The following list provides the most relevant files of SemiVL's implementation:
+The following list provides the most relevant files of DiffMatch's implementation:
 
 * [experiments.py](experiments.py): Definitions of the experiment configs used in the paper.
 * [diffmatch_fixmatch.py](diffmatch_fixmatch.py): Main training logic for DiffMatch.

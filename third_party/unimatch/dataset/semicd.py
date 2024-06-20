@@ -43,15 +43,15 @@ class SemiCDDataset(Dataset):
         mask = mask / 255
         mask = Image.fromarray(mask.astype(np.uint8))
 
-        # get pseudo labels
-        vl_mask_A = Image.open(os.path.join(self.vl_label_root, 'A', id))
-        vl_mask_B = Image.open(os.path.join(self.vl_label_root, 'B', id))
-        vl_mask_change = Image.open(os.path.join(self.vl_change_label_root, id))
-
         if self.mode == 'val':
             imgA, mask = normalize(imgA, mask)
             imgB = normalize(imgB)
             return imgA, imgB, mask, id
+
+        # get pseudo labels
+        vl_mask_A = Image.open(os.path.join(self.vl_label_root, 'A', id))
+        vl_mask_B = Image.open(os.path.join(self.vl_label_root, 'B', id))
+        vl_mask_change = Image.open(os.path.join(self.vl_change_label_root, id))
         
         masks = [mask, vl_mask_change, vl_mask_A, vl_mask_B]
         imgA, imgB, masks = resize(imgA, imgB, masks, (0.8, 1.2))

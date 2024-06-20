@@ -14,10 +14,10 @@ import numpy as np
 
 
 LEVIR_PALETTE = np.array([
-    [0, 0, 0], [255, 0, 0]], dtype=np.uint8)
+    [0, 0, 0], [255, 255, 255]], dtype=np.uint8)
 
 WHU_PALETTE = np.array([
-    [0, 0, 0], [255, 0, 0]], dtype=np.uint8)
+    [0, 0, 0], [255, 255, 255]], dtype=np.uint8)
 
 
 def get_palette(dataset):

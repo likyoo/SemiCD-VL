@@ -6,7 +6,11 @@
 
 Change Detection (CD) aims to identify pixels with semantic changes between images. However, annotating massive numbers of pixel-level images is labor-intensive and costly, especially for multi-temporal images, which require pixel-wise comparisons by human experts. Considering the excellent performance of visual language models (VLMs) for zero-shot, open-vocabulary, etc. with prompt-based reasoning, it is promising to utilize VLMs to make better CD under limited labeled data. In this paper, we propose a VLM guidance-based semi-supervised CD method, namely DiffMatch. The insight of DiffMatch is to synthesize free change labels using VLMs to provide additional supervision signals for unlabeled data. However, almost all current VLMs are designed for single-temporal images and cannot be directly applied to bi- or multi-temporal images. Motivated by this, we first propose a VLM-based mixed change event generation (CEG) strategy to yield pseudo labels for unlabeled CD data. Since the additional supervised signals provided by these VLM-driven pseudo labels may conflict with the pseudo labels from the consistency regularization paradigm (e.g. FixMatch), we propose the dual projection head for de-entangling different signal sources. Further, we explicitly decouple the bi-temporal images semantic representation through two auxiliary segmentation decoders, which are also guided by VLM. Finally, to make the model more adequately capture change representations, we introduce metric-aware supervision by feature-level contrastive loss in auxiliary branches. Extensive experiments show the advantage of DiffMatch. For instance, DiffMatch improves the FixMatch baseline by +5.3 $IoU^c$ on WHU-CD and by +2.4 $IoU^c$ on LEVIR-CD with 5\% labels, and DiffMatch requires only 5\% to 10\% of the labels to achieve performance similar to the supervised methods. In addition, our CEG strategy, in an un-supervised manner, can achieve performance far superior to state-of-the-art (SOTA) un-supervised CD methods (e.g., IoU improved from 18.8\% to 46.3\% on LEVIR-CD dataset).
 
+<div align="center">
+
 <img src="docs/overview.png" width="700">
+
+</div>
 
 We evaluate DiffMatch on 2 change detection datasets (LEVIR-CD and WHU-CD), where it achieves major gains over previous semi-supervised methods as shown exemplary below.
 

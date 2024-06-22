@@ -19,7 +19,7 @@ If you find DiffMatch useful in your research, please consider citing:
 ```
 @article{li2024diffmatch,
   title={DiffMatch: Visual-Language Guidance Makes Better Semi-supervised Change Detector},
-  author={Li, Kaiyu and Cao, Xiangyong and Deng, Yupeng and Meng, Deyu},
+  author={Li, Kaiyu and Cao, Xiangyong and Deng, Yupeng and Liu, Junmin and Meng, Deyu and Wang, Zhi},
   journal={arXiv preprint arXiv:2405.04788},
   year={2024}
 }

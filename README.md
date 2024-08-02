@@ -17,8 +17,8 @@ We evaluate SemiCD-VL on 2 change detection datasets (LEVIR-CD and WHU-CD), wher
 If you find SemiCD-VL useful in your research, please consider citing:
 
 ```
-@article{li2024diffmatch,
-  title={DiffMatch: Visual-Language Guidance Makes Better Semi-supervised Change Detector},
+@article{li2024semicd_vl,
+  title={SemiCD-VL: Visual-Language Model Guidance Makes Better Semi-supervised Change Detector},
   author={Li, Kaiyu and Cao, Xiangyong and Deng, Yupeng and Liu, Junmin and Meng, Deyu and Wang, Zhi},
   journal={arXiv preprint arXiv:2405.04788},
   year={2024}
@@ -98,7 +98,7 @@ To launch a training job, please run:
 
 ```bash
 python experiments.py --exp EXP_ID --run RUN_ID
-# e.g. EXP_ID=47; RUN_ID=0 for DiffMatch on LEVIR-CD with 5% labels
+# e.g. EXP_ID=47; RUN_ID=0 for SemiCD-VL on LEVIR-CD with 5% labels
 ```
 
 It will automatically generate the relevant config files in `configs/generated/` and start the corresponding training job.

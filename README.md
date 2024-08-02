@@ -1,10 +1,10 @@
-# DiffMatch: Visual-Language Guidance Makes Better Semi-supervised Change Detector
+# SemiCD-VL: Visual-Language Model Guidance Makes Better Semi-supervised Change Detector
 
-**Code for DiffMatch paper: [DiffMatch: Visual-Language Guidance Makes Better Semi-supervised Change Detector.](https://arxiv.org/abs/2405.04788)**
+**Code for SemiCD-VL (formerly: DiffMatch) paper: [SemiCD-VL: Visual-Language Model Guidance Makes Better Semi-supervised Change Detector.](https://arxiv.org/abs/2405.04788)**
 
 ## Overview
 
-Change Detection (CD) aims to identify pixels with semantic changes between images. However, annotating massive numbers of pixel-level images is labor-intensive and costly, especially for multi-temporal images, which require pixel-wise comparisons by human experts. Considering the excellent performance of visual language models (VLMs) for zero-shot, open-vocabulary, etc. with prompt-based reasoning, it is promising to utilize VLMs to make better CD under limited labeled data. In this paper, we propose a VLM guidance-based semi-supervised CD method, namely DiffMatch. The insight of DiffMatch is to synthesize free change labels using VLMs to provide additional supervision signals for unlabeled data. However, almost all current VLMs are designed for single-temporal images and cannot be directly applied to bi- or multi-temporal images. Motivated by this, we first propose a VLM-based mixed change event generation (CEG) strategy to yield pseudo labels for unlabeled CD data. Since the additional supervised signals provided by these VLM-driven pseudo labels may conflict with the pseudo labels from the consistency regularization paradigm (e.g. FixMatch), we propose the dual projection head for de-entangling different signal sources. Further, we explicitly decouple the bi-temporal images semantic representation through two auxiliary segmentation decoders, which are also guided by VLM. Finally, to make the model more adequately capture change representations, we introduce metric-aware supervision by feature-level contrastive loss in auxiliary branches. Extensive experiments show the advantage of DiffMatch. For instance, DiffMatch improves the FixMatch baseline by +5.3 $IoU^c$ on WHU-CD and by +2.4 $IoU^c$ on LEVIR-CD with 5\% labels, and DiffMatch requires only 5\% to 10\% of the labels to achieve performance similar to the supervised methods. In addition, our CEG strategy, in an un-supervised manner, can achieve performance far superior to state-of-the-art (SOTA) un-supervised CD methods (e.g., IoU improved from 18.8\% to 46.3\% on LEVIR-CD dataset).
+Change Detection (CD) aims to identify pixels with semantic changes between images. However, annotating massive numbers of pixel-level images is labor-intensive and costly, especially for multi-temporal images, which require pixel-wise comparisons by human experts. Considering the excellent performance of visual language models (VLMs) for zero-shot, open-vocabulary, etc. with prompt-based reasoning, it is promising to utilize VLMs to make better CD under limited labeled data. In this paper, we propose a VLM guidance-based semi-supervised CD method, namely SemiCD-VL. The insight of SemiCD-VL is to synthesize free change labels using VLMs to provide additional supervision signals for unlabeled data. However, almost all current VLMs are designed for single-temporal images and cannot be directly applied to bi- or multi-temporal images. Motivated by this, we first propose a VLM-based mixed change event generation (CEG) strategy to yield pseudo labels for unlabeled CD data. Since the additional supervised signals provided by these VLM-driven pseudo labels may conflict with the original pseudo labels from the consistency regularization paradigm (e.g. FixMatch), we propose the dual projection head for de-entangling different signal sources. Further, we explicitly decouple the bi-temporal images semantic representation through two auxiliary segmentation decoders, which are also guided by VLM. Finally, to make the model more adequately capture change representations, we introduce contrastive consistency regularization by constructing feature-level contrastive loss in auxiliary branches. Extensive experiments show the advantage of SemiCD-VL. For instance, SemiCD-VL improves the FixMatch baseline by +5.3 $IoU^c$ on WHU-CD and by +2.4 $IoU^c$ on LEVIR-CD with 5\% labels, and SemiCD-VL requires only 5\% to 10\% of the labels to achieve performance similar to the supervised methods. In addition, our CEG strategy, in an un-supervised manner, can achieve performance far superior to state-of-the-art (SOTA) un-supervised CD methods (e.g., IoU improved from 18.8\% to 46.3\% on LEVIR-CD dataset).
 
 <div align="center">
 
@@ -12,9 +12,9 @@ Change Detection (CD) aims to identify pixels with semantic changes between imag
 
 </div>
 
-We evaluate DiffMatch on 2 change detection datasets (LEVIR-CD and WHU-CD), where it achieves major gains over previous semi-supervised methods as shown exemplary below.
+We evaluate SemiCD-VL on 2 change detection datasets (LEVIR-CD and WHU-CD), where it achieves major gains over previous semi-supervised methods as shown exemplary below.
 
-If you find DiffMatch useful in your research, please consider citing:
+If you find SemiCD-VL useful in your research, please consider citing:
 
 ```
 @article{li2024diffmatch,
@@ -32,8 +32,8 @@ If you find DiffMatch useful in your research, please consider citing:
 Create a conda environment:
 
 ```bash
-conda create -n diffmatch python=3.7.13
-conda activate diffmatch
+conda create -n semicd_vl python=3.7.13
+conda activate semicd_vl
 ```
 
 Install the required pip packages:
@@ -109,7 +109,7 @@ The training log, tensorboard, checkpoints, and debug images are stored in `exp/
 
 ## Framework Structure
 
-The following list provides the most relevant files of DiffMatch's implementation:
+The following list provides the most relevant files of SemiCD-VL(DiffMatch)'s implementation:
 
 * [experiments.py](experiments.py): Definitions of the experiment configs used in the paper.
 * [diffmatch_fixmatch.py](diffmatch_fixmatch.py): Main training logic for DiffMatch.
@@ -120,4 +120,4 @@ The following list provides the most relevant files of DiffMatch's implementatio
 
 ## Acknowledgements
 
-DiffMatch is based on [SemiVL](https://github.com/google-research/semivl), [UniMatch](https://github.com/LiheYoung/UniMatch), [APE](https://github.com/shenyunhang/APE), and [MMSegmentation](https://github.com/open-mmlab/mmsegmentation). We thank their authors for making the source code publicly available.
+SemiCD-VL is based on [SemiVL](https://github.com/google-research/semivl), [UniMatch](https://github.com/LiheYoung/UniMatch), [APE](https://github.com/shenyunhang/APE), and [MMSegmentation](https://github.com/open-mmlab/mmsegmentation). We thank their authors for making the source code publicly available.

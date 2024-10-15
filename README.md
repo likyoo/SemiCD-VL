@@ -12,7 +12,9 @@ Change Detection (CD) aims to identify pixels with semantic changes between imag
 
 </div>
 
-We evaluate SemiCD-VL on 2 change detection datasets (LEVIR-CD and WHU-CD), where it achieves major gains over previous semi-supervised methods as shown exemplary below.
+We evaluate SemiCD-VL on 2 change detection datasets (LEVIR-CD and WHU-CD), where it achieves major gains over previous semi-supervised methods as shown below.
+
+<img src="https://github.com/user-attachments/assets/1c82fa0e-a0a1-4857-94c3-5500a38df0ce" width="90%"/>
 
 If you find SemiCD-VL useful in your research, please consider citing:
 

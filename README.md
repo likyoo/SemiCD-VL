@@ -120,6 +120,18 @@ The following list provides the most relevant files of SemiCD-VL(DiffMatch)'s im
 * [third_party/unimatch/dataset/semicd.py](third_party/unimatch/dataset/semicd.py): Data loader for semi-supervised training.
 * [configs/\_base\_/models](configs/_base_/models): Model config files.
 
+## Citation
+
+```
+@article{li2024semicd,
+  title={SemiCD-VL: Visual-Language Model Guidance Makes Better Semi-supervised Change Detector},
+  author={Li, Kaiyu and Cao, Xiangyong and Deng, Yupeng and Song, Jiayi and Liu, Junmin and Meng, Deyu and Wang, Zhi},
+  journal={IEEE Transactions on Geoscience and Remote Sensing},
+  year={2024},
+  publisher={IEEE}
+}
+```
+
 ## Acknowledgements
 
 SemiCD-VL is based on [SemiVL](https://github.com/google-research/semivl), [UniMatch](https://github.com/LiheYoung/UniMatch), [APE](https://github.com/shenyunhang/APE), and [MMSegmentation](https://github.com/open-mmlab/mmsegmentation). We thank their authors for making the source code publicly available.

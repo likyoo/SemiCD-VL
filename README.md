@@ -16,17 +16,6 @@ We evaluate SemiCD-VL on 2 change detection datasets (LEVIR-CD and WHU-CD), wher
 
 <img src="https://github.com/user-attachments/assets/1c82fa0e-a0a1-4857-94c3-5500a38df0ce" width="90%"/>
 
-If you find SemiCD-VL useful in your research, please consider citing:
-
-```
-@article{li2024semicd_vl,
-  title={SemiCD-VL: Visual-Language Model Guidance Makes Better Semi-supervised Change Detector},
-  author={Li, Kaiyu and Cao, Xiangyong and Deng, Yupeng and Liu, Junmin and Meng, Deyu and Wang, Zhi},
-  journal={arXiv preprint arXiv:2405.04788},
-  year={2024}
-}
-```
-
 ## Getting Started
 
 ### Environment
